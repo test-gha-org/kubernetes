@@ -37,8 +37,7 @@ jobs:
           uname -a
           lscpu
           free -g
-          go version
-
+  
       - name: Release
         run: |
           KUBE_BUILD_PLATFORMS=$(uname -m | sed s/aarch64/arm64/ | sed s/x86_64/amd64/) make cross
