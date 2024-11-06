@@ -37,6 +37,7 @@ jobs:
           uname -a
           lscpu
           free -g
+          go version
 
       - name: Release
         run: |
