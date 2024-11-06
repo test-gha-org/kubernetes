@@ -41,7 +41,7 @@ jobs:
 
       - name: Release
         run: |
-          make cross
+          KUBE_BUILD_PLATFORMS=$(uname -m | sed s/aarch64/arm64/ | sed s/x86_64/amd64/) make cross
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
